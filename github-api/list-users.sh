@@ -1,4 +1,12 @@
 #!/bin/bash
+####################
+# Author: Vijayalakshmi T
+# Date : 2-APR-2025
+# Version : V1
+# This script lists the users who has access to GitHub repo
+#####################
+
+helper()
 
 # GitHub API URL
 API_URL="https://api.github.com"
@@ -34,7 +42,16 @@ function list_users_with_read_access {
         echo "Users with read access to ${REPO_OWNER}/${REPO_NAME}:"
         echo "$collaborators"
     fi
+
+  
 }
+
+function helper {
+  expected-smd-args=2
+  if [ $# -ne expected-smd-args ]; then
+  echo "please execute the script with required arguments"
+  echo "asd"
+  
 
 # Main script
 
